@@ -1,5 +1,13 @@
 import praw
 import configparser
+from global_vars import init
+init()
+from global_vars import mod_list
+from db import connect_db
+from geography import build_geography
+from comment_processing import process_comment
+
+global mod_list
 
 # Load config
 config = configparser.ConfigParser()
@@ -25,6 +33,7 @@ reddit = praw.Reddit(client_id=client_id,
 print("Connected to Reddit API")
 
 # to find the top most submission in the supervisory subreddit
+global subreddit
 subreddit = reddit.subreddit(supervisory_subreddit)
 
 print("\nTest - Getting top submission in supervisory subreddit...")
@@ -34,25 +43,23 @@ for submission in subreddit.top(limit = 1):
 
 
 print("\nSearching for moderators in the subreddit...")
-modList = []
 
 for moderator in subreddit.moderator():
     print(f"Found moderator: {moderator}")
-    modList.append(moderator)
+    mod_list.append(moderator)
 
-print(f"Found {len(modList)} moderators in the subreddit")
+print(f"Found {len(mod_list)} moderators in the subreddit")
 
+# Setup other files
+connect_db()
+build_geography()
 
-def process_comment(comment):
-    author = comment.author
-    is_mod = author in modList
-    start_with_exclamation = comment.body.startswith("!")
-    print(f"\nComment found ({comment}): {comment.body[:100]}")
-    print(f"Author: {comment.author}. Is Mod:{is_mod}. Exclamation: {start_with_exclamation}")
-    if is_mod == False or start_with_exclamation == False:
-        print("Comment does not meet criteria. Ignoring...")
-        return
-    print("Comment meets criteria. Processing...")
+# testing wiki page for future
+irl_wiki_page = config.get('Wiki', 'irl_page')
+
+wiki_page = subreddit.wiki[irl_wiki_page]
+#print(f"Found wiki page: {wiki_page.content_html}")
+
 
 
 print("\nListing for new comments")

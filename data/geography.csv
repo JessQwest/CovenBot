@@ -1,0 +1,304 @@
+region,USA
+region,UK
+region,Europe
+region,World
+
+subregion,USA,Alaska
+subregion,USA,Alabama
+subregion,USA,Arkansas
+subregion,USA,American Samoa
+subregion,USA,Arizona
+subregion,USA,California
+subregion,USA,Colorado
+subregion,USA,Connecticut
+subregion,USA,District of Columbia
+subregion,USA,Delaware
+subregion,USA,Florida
+subregion,USA,Georgia
+subregion,USA,Guam
+subregion,USA,Hawaii
+subregion,USA,Iowa
+subregion,USA,Idaho
+subregion,USA,Illinois
+subregion,USA,Indiana
+subregion,USA,Kansas
+subregion,USA,Kentucky
+subregion,USA,Louisiana
+subregion,USA,Massachusetts
+subregion,USA,Maryland
+subregion,USA,Maine
+subregion,USA,Michigan
+subregion,USA,Minnesota
+subregion,USA,Missouri
+subregion,USA,Mississippi
+subregion,USA,Montana
+subregion,USA,North Carolina
+subregion,USA,North Dakota
+subregion,USA,Nebraska
+subregion,USA,New Hampshire
+subregion,USA,New Jersey
+subregion,USA,New Mexico
+subregion,USA,Nevada
+subregion,USA,New York
+subregion,USA,Ohio
+subregion,USA,Oklahoma
+subregion,USA,Oregon
+subregion,USA,Pennsylvania
+subregion,USA,Puerto Rico
+subregion,USA,Rhode Island
+subregion,USA,South Carolina
+subregion,USA,South Dakota
+subregion,USA,Tennessee
+subregion,USA,Texas
+subregion,USA,Utah
+subregion,USA,Virginia
+subregion,USA,Vermont
+subregion,USA,Washington
+subregion,USA,Wisconsin
+subregion,USA,West Virginia
+subregion,USA,Wyoming
+
+subregion,UK,England
+subregion,UK,Northern Ireland
+subregion,UK,Scotland
+subregion,UK,Wales
+
+subregion,Europe,Russia
+subregion,Europe,Germany
+subregion,Europe,France
+subregion,Europe,Italy
+subregion,Europe,Spain
+subregion,Europe,Poland
+subregion,Europe,Ukraine
+subregion,Europe,Romania
+subregion,Europe,Netherlands
+subregion,Europe,Belgium
+subregion,Europe,Czech Republic
+subregion,Europe,Sweden
+subregion,Europe,Portugal
+subregion,Europe,Greece
+subregion,Europe,Hungary
+subregion,Europe,Austria
+subregion,Europe,Belarus
+subregion,Europe,Switzerland
+subregion,Europe,Bulgaria
+subregion,Europe,Serbia
+subregion,Europe,Denmark
+subregion,Europe,Finland
+subregion,Europe,Norway
+subregion,Europe,Slovakia
+subregion,Europe,Ireland
+subregion,Europe,Croatia
+subregion,Europe,Bosnia and Herzegovina
+subregion,Europe,Moldova
+subregion,Europe,Lithuania
+subregion,Europe,Albania
+subregion,Europe,Slovenia
+subregion,Europe,Latvia
+subregion,Europe,North Macedonia
+subregion,Europe,Estonia
+subregion,Europe,Luxembourg
+subregion,Europe,Montenegro
+subregion,Europe,Malta
+subregion,Europe,Iceland
+subregion,Europe,Andorra
+subregion,Europe,Liechtenstein
+subregion,Europe,Monaco
+subregion,Europe,San Marino
+
+subregion,World,Afghanistan
+subregion,World,Albania
+subregion,World,Algeria
+subregion,World,Andorra
+subregion,World,Angola
+subregion,World,Antigua & Deps
+subregion,World,Argentina
+subregion,World,Armenia
+subregion,World,Australia
+subregion,World,Austria
+subregion,World,Azerbaijan
+subregion,World,Bahamas
+subregion,World,Bahrain
+subregion,World,Bangladesh
+subregion,World,Barbados
+subregion,World,Belarus
+subregion,World,Belgium
+subregion,World,Belize
+subregion,World,Benin
+subregion,World,Bhutan
+subregion,World,Bolivia
+subregion,World,Bosnia Herzegovina
+subregion,World,Botswana
+subregion,World,Brazil
+subregion,World,Brunei
+subregion,World,Bulgaria
+subregion,World,Burkina
+subregion,World,Burundi
+subregion,World,Cambodia
+subregion,World,Cameroon
+subregion,World,Canada
+subregion,World,Cape Verde
+subregion,World,Central African Rep
+subregion,World,Chad
+subregion,World,Chile
+subregion,World,China
+subregion,World,Colombia
+subregion,World,Comoros
+subregion,World,Congo
+subregion,World,Congo (Democratic Rep)
+subregion,World,Costa Rica
+subregion,World,Croatia
+subregion,World,Cuba
+subregion,World,Cyprus
+subregion,World,Czech Republic
+subregion,World,Denmark
+subregion,World,Djibouti
+subregion,World,Dominica
+subregion,World,Dominican Republic
+subregion,World,East Timor
+subregion,World,Ecuador
+subregion,World,Egypt
+subregion,World,El Salvador
+subregion,World,Equatorial Guinea
+subregion,World,Eritrea
+subregion,World,Estonia
+subregion,World,Ethiopia
+subregion,World,Fiji
+subregion,World,Finland
+subregion,World,France
+subregion,World,Gabon
+subregion,World,Gambia
+subregion,World,Georgia
+subregion,World,Germany
+subregion,World,Ghana
+subregion,World,Greece
+subregion,World,Grenada
+subregion,World,Guatemala
+subregion,World,Guinea
+subregion,World,Guinea-Bissau
+subregion,World,Guyana
+subregion,World,Haiti
+subregion,World,Honduras
+subregion,World,Hungary
+subregion,World,Iceland
+subregion,World,India
+subregion,World,Indonesia
+subregion,World,Iran
+subregion,World,Iraq
+subregion,World,Ireland (Republic)
+subregion,World,Israel
+subregion,World,Italy
+subregion,World,Ivory Coast
+subregion,World,Jamaica
+subregion,World,Japan
+subregion,World,Jordan
+subregion,World,Kazakhstan
+subregion,World,Kenya
+subregion,World,Kiribati
+subregion,World,Korea North
+subregion,World,Korea South
+subregion,World,Kosovo
+subregion,World,Kuwait
+subregion,World,Kyrgyzstan
+subregion,World,Laos
+subregion,World,Latvia
+subregion,World,Lebanon
+subregion,World,Lesotho
+subregion,World,Liberia
+subregion,World,Libya
+subregion,World,Liechtenstein
+subregion,World,Lithuania
+subregion,World,Luxembourg
+subregion,World,Macedonia
+subregion,World,Madagascar
+subregion,World,Malawi
+subregion,World,Malaysia
+subregion,World,Maldives
+subregion,World,Mali
+subregion,World,Malta
+subregion,World,Marshall Islands
+subregion,World,Mauritania
+subregion,World,Mauritius
+subregion,World,Mexico
+subregion,World,Micronesia
+subregion,World,Moldova
+subregion,World,Monaco
+subregion,World,Mongolia
+subregion,World,Montenegro
+subregion,World,Morocco
+subregion,World,Mozambique
+subregion,World,Myanmar, (Burma)
+subregion,World,Namibia
+subregion,World,Nauru
+subregion,World,Nepal
+subregion,World,Netherlands
+subregion,World,New Zealand
+subregion,World,Nicaragua
+subregion,World,Niger
+subregion,World,Nigeria
+subregion,World,Norway
+subregion,World,Oman
+subregion,World,Pakistan
+subregion,World,Palau
+subregion,World,Panama
+subregion,World,Papua New Guinea
+subregion,World,Paraguay
+subregion,World,Peru
+subregion,World,Philippines
+subregion,World,Poland
+subregion,World,Portugal
+subregion,World,Qatar
+subregion,World,Romania
+subregion,World,Russian Federation
+subregion,World,Rwanda
+subregion,World,St Kitts & Nevis
+subregion,World,St Lucia
+subregion,World,Saint Vincent & the Grenadines
+subregion,World,Samoa
+subregion,World,San Marino
+subregion,World,Sao Tome & Principe
+subregion,World,Saudi Arabia
+subregion,World,Senegal
+subregion,World,Serbia
+subregion,World,Seychelles
+subregion,World,Sierra Leone
+subregion,World,Singapore
+subregion,World,Slovakia
+subregion,World,Slovenia
+subregion,World,Solomon Islands
+subregion,World,Somalia
+subregion,World,South Africa
+subregion,World,South Sudan
+subregion,World,Spain
+subregion,World,Sri Lanka
+subregion,World,Sudan
+subregion,World,Suriname
+subregion,World,Swaziland
+subregion,World,Sweden
+subregion,World,Switzerland
+subregion,World,Syria
+subregion,World,Taiwan
+subregion,World,Tajikistan
+subregion,World,Tanzania
+subregion,World,Thailand
+subregion,World,Togo
+subregion,World,Tonga
+subregion,World,Trinidad & Tobago
+subregion,World,Tunisia
+subregion,World,Turkey
+subregion,World,Turkmenistan
+subregion,World,Tuvalu
+subregion,World,Uganda
+subregion,World,Ukraine
+subregion,World,United Arab Emirates
+subregion,World,United Kingdom
+subregion,World,United States
+subregion,World,Uruguay
+subregion,World,Uzbekistan
+subregion,World,Vanuatu
+subregion,World,Vatican City
+subregion,World,Venezuela
+subregion,World,Vietnam
+subregion,World,Yemen
+subregion,World,Zambia
+subregion,World,Zimbabwe
