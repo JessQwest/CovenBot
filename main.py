@@ -22,14 +22,39 @@ reddit = praw.Reddit(client_id=client_id,
                      password=password,
                      user_agent=user_agent)
 
+print("Connected to Reddit API")
+
 # to find the top most submission in the supervisory subreddit
 subreddit = reddit.subreddit(supervisory_subreddit)
+
+print("\nTest - Getting top submission in supervisory subreddit...")
+# get the top most submission as a test that the API is working
 for submission in subreddit.top(limit = 1):
-    # displays the submission title
-    print(submission.title)
-    # displays the net upvotes of the submission
-    print(submission.score)
-    # displays the submission's ID
-    print(submission.id)
-    # displays the url of the submission
-    print(submission.url)
+    print(f"Success! Top post in {supervisory_subreddit} is '{submission.title}' with {submission.score} upvotes")
+
+
+print("\nSearching for moderators in the subreddit...")
+modList = []
+
+for moderator in subreddit.moderator():
+    print(f"Found moderator: {moderator}")
+    modList.append(moderator)
+
+print(f"Found {len(modList)} moderators in the subreddit")
+
+
+def process_comment(comment):
+    author = comment.author
+    is_mod = author in modList
+    start_with_exclamation = comment.body.startswith("!")
+    print(f"\nComment found ({comment}): {comment.body[:100]}")
+    print(f"Author: {comment.author}. Is Mod:{is_mod}. Exclamation: {start_with_exclamation}")
+    if is_mod == False or start_with_exclamation == False:
+        print("Comment does not meet criteria. Ignoring...")
+        return
+    print("Comment meets criteria. Processing...")
+
+
+print("\nListing for new comments")
+for comment in subreddit.stream.comments():
+    process_comment(comment)
