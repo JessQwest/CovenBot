@@ -4,6 +4,7 @@ import time
 
 from global_vars import mod_list, regions, subregions
 from db import insert_irl_record
+from wiki import build_irl_wiki
 
 def process_comment(comment):
     author = comment.author
@@ -91,6 +92,7 @@ def parse_irl(comment):
     print(f"Region: {region}, Subregion: {subregion}, Coven Name: {coven_name}, Min Age: {min_age}, Post URL: {post_url}, Timestamp: {current_timestamp}")
     record = (post_url, author, coven_name, region, subregion, min_age, current_timestamp)
     insert_irl_record(record)
+    build_irl_wiki()
 
 def parse_online(comment):
     print("Parsing Online comment (Not implemented)")

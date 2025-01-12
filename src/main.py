@@ -1,17 +1,12 @@
 import praw
-import configparser
 from global_vars import init
 init()
-from global_vars import mod_list
+global subreddit
+from global_vars import mod_list, config, subreddit
 from db import connect_db
 from geography import build_geography
 from comment_processing import process_comment
 
-global mod_list
-
-# Load config
-config = configparser.ConfigParser()
-config.read('config/config.ini')
 
 # initialize with appropriate values
 client_id = config.get('General', 'client_id')
@@ -33,7 +28,6 @@ reddit = praw.Reddit(client_id=client_id,
 print("Connected to Reddit API")
 
 # to find the top most submission in the supervisory subreddit
-global subreddit
 subreddit = reddit.subreddit(supervisory_subreddit)
 
 print("\nTest - Getting top submission in supervisory subreddit...")
