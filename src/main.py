@@ -1,8 +1,7 @@
 import praw
 from global_vars import init
 init()
-global subreddit
-from global_vars import mod_list, config, subreddit
+from global_vars import mod_list, config
 from db import connect_db
 from geography import build_geography
 from comment_processing import process_comment
@@ -47,14 +46,6 @@ print(f"Found {len(mod_list)} moderators in the subreddit")
 # Setup other files
 connect_db()
 build_geography()
-
-# testing wiki page for future
-irl_wiki_page = config.get('Wiki', 'irl_page')
-
-wiki_page = subreddit.wiki[irl_wiki_page]
-#print(f"Found wiki page: {wiki_page.content_html}")
-
-
 
 print("\nListing for new comments")
 for comment in subreddit.stream.comments():

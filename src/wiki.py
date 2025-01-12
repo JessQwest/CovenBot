@@ -1,6 +1,5 @@
 from db import fetch_records
 from src.data_class.IRLGroup import IRLGroup
-from global_vars import archive_md, subreddit
 
 def fetch_header(header_name):
     print("Fetching header")
@@ -9,6 +8,8 @@ def fetch_header(header_name):
 
 
 def build_irl_wiki():
+    from main import subreddit
+    from global_vars import archive_md
     print("\n\n\n\n\nSUBREDDIT:", subreddit)
     final_markdown = fetch_header("irl_header") + "\n" + archive_md + "\n\n"
     irl_records_raw = fetch_records("irl_groups")
@@ -45,4 +46,16 @@ def build_irl_wiki():
                 final_markdown += f"* [{record.coven_name}](https://www.reddit.com/r/{subreddit}/comments/{record.post_url}){min_age_text} by u/{record.author}\n"
 
     print("Final markdown:", final_markdown)
-    print("Wiki built")
+    post_wiki_page('irl_page', final_markdown)
+
+def post_wiki_page(wiki_page, final_markdown):
+    from main import subreddit
+    from global_vars import config
+    # testing wiki page for future
+    wiki_page_name = config.get('Wiki', wiki_page)
+
+    wiki_page = subreddit.wiki[wiki_page_name]
+
+    print("Posting wiki page")
+    wiki_page.edit(content=final_markdown)
+    print("Wiki page posted")
