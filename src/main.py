@@ -28,6 +28,7 @@ print("Connected to Reddit API")
 
 # to find the top most submission in the supervisory subreddit
 subreddit = reddit.subreddit(supervisory_subreddit)
+user = reddit.user.me()
 
 print("\nTest - Getting top submission in supervisory subreddit...")
 # get the top most submission as a test that the API is working
@@ -47,6 +48,21 @@ print(f"Found {len(mod_list)} moderators in the subreddit")
 connect_db()
 build_geography()
 
+processed_comments = set()
+
+# Load processed comments from file
+try:
+    with open('processed_comments.txt', 'r') as f:
+        for line in f:
+            processed_comments.add(line.strip())
+except FileNotFoundError:
+    pass
+
 print("\nListing for new comments")
-for comment in subreddit.stream.comments():
-    process_comment(comment)
+with open('processed_comments.txt', 'a') as f:
+    for comment in subreddit.stream.comments():
+        if comment.id not in processed_comments:
+            success = process_comment(comment)
+            processed_comments.add(comment.id)
+            f.write(f"{comment.id}\n")
+            f.flush()

@@ -171,4 +171,5 @@ cython_debug/
 .pypirc
 
 config/config.ini
+processed_comments.txt
 sql.db

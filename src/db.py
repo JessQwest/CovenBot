@@ -35,12 +35,13 @@ def fetch_records(table_name):
     c.execute(f"SELECT * FROM {table_name}")
     return c.fetchall()
 
-def insert_irl_record(record):
+def insert_irl_record(record) -> bool:
     global conn, c
     if c is None:
         print("Database connection not established. Exiting...")
-        return
+        return False
     print(f"Insering record: {record}")
     c.execute("INSERT OR REPLACE INTO irl_groups (post_url, author, coven_name, region, subregion, min_age, created_timestamp) VALUES (?,?,?,?,?,?,?)", record)
     conn.commit()
     print(f"Record inserted: {record}")
+    return True
